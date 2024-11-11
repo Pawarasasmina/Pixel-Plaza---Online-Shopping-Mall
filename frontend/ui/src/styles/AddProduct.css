@@ -1,0 +1,28 @@
+/* AddProduct.css */
+
+.relative {
+  position: relative;
+}
+
+[class^="bg-"][class$="[#F4F4F4]"] {
+  background-color: #f4f4f4;
+}
+
+[class^="border-"][class$="[#E76F51]"] {
+  border-color: #e76f51;
+}
+
+.font-russo {
+  font-family: "Russo One", sans-serif;
+}
+
+.input,
+.textarea,
+.btn {
+  border-radius: 0.375rem;
+}
+
+.btn-primary {
+  background-color: #e76f51;
+  color: #fff;
+}

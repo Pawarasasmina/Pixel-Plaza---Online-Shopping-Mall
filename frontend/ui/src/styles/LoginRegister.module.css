@@ -1,0 +1,278 @@
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: "Russo One", sans-serif;
+}
+
+.login-register-page {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #5c646c;
+}
+
+.container {
+  background-color: #5c646c;
+  border-radius: 30px;
+  border: 4px solid #e76f51;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1000px;
+  max-width: 90%;
+  min-height: 700px;
+  height: auto;
+  display: flex;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.form-container {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  transition: transform 0.6s ease-in-out;
+}
+
+.sign-in,
+.sign-up {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
+}
+
+.sign-in {
+  left: 0;
+  z-index: 2;
+}
+
+.sign-up {
+  left: -25px;
+  opacity: 0;
+  z-index: 1;
+}
+
+.container.active .sign-in {
+  transform: translateX(100%);
+}
+
+.container.active .sign-up {
+  transform: translateX(100%);
+  opacity: 1;
+  z-index: 5;
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px #e76f51;
+  }
+  50% {
+    box-shadow: 0 0 20px #e76f51;
+  }
+  100% {
+    box-shadow: 0 0 5px #e76f51;
+  }
+}
+
+.container p {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  margin: 20px 0;
+  color: #fff;
+}
+
+.container span {
+  font-size: 14px;
+  color: #fff;
+}
+
+.container a {
+  color: #fff;
+  font-size: 15px;
+  text-decoration: none;
+  margin: 15px 0 10px;
+}
+
+.container button {
+  background-color: #e76f51;
+  color: #fff;
+  font-size: 14px;
+  padding: 12px 50px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-top: 10px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.container button.hidden {
+  background-color: transparent;
+  border-color: #fff;
+}
+
+.container button:hover {
+  background-color: #e76f51;
+  color: #fff;
+  animation: glow 1s infinite;
+}
+
+.container form {
+  background-color: #5c646c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 50px;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.container input {
+  background-color: #fff;
+  border: 2px solid #e76f51;
+  margin: 12px 0;
+  padding: 12px 20px;
+  font-size: 14px;
+  border-radius: 8px;
+  width: 150%;
+  max-width: 500px;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.social-icons {
+  margin: 30px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.social-icons a {
+  border: 2px solid #e76f51;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5px;
+  width: 50px;
+  height: 50px;
+  color: #fff;
+  font-size: 20px;
+}
+
+.toggle-container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  transition: transform 0.6s ease-in-out, border-radius 0.6s ease-in-out;
+  border-radius: 150px 0 0 100px;
+  z-index: 1000;
+}
+
+.container.active .toggle-container {
+  transform: translateX(-100%);
+  border-radius: 0 150px 100px 0;
+}
+
+.toggle {
+  background-color: #212529;
+  height: 100%;
+  width: 200%;
+  position: relative;
+  left: -100%;
+  transition: transform 0.6s ease-in-out;
+}
+
+.container.active .toggle {
+  transform: translateX(50%);
+}
+
+.toggle-panel {
+  position: absolute;
+  top: 35%;
+  height: 100%;
+  width: 50%;
+  text-align: center;
+  padding: 0 50px;
+  box-sizing: border-box;
+  transition: all 0.6s ease-in-out;
+}
+
+.toggle-panel h1 {
+  margin-bottom: 20px;
+}
+
+.toggle-left {
+  left: 0;
+}
+
+.toggle-right {
+  right: 0;
+}
+
+.toggle-panel button {
+  background-color: #e76f51;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 8px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-top: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.toggle-panel button:hover {
+  background-color: #e76f51;
+  color: #fff;
+  animation: glow 1s infinite;
+}
+
+.toggle-panel h1,
+.toggle-panel p {
+  transition: font-weight 0.35s, color 0.35s;
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+.toggle-panel h1:hover,
+.toggle-panel p:hover {
+  font-weight: 900;
+  color: rgb(238, 242, 255);
+}
+
+.toggle-panel h1:hover + p,
+.toggle-panel p:hover + p {
+  font-weight: 500;
+  color: rgb(199, 210, 254);
+}
+
+.toggle-panel h1:has(+ p:hover),
+.toggle-panel p:has(+ p:hover) {
+  font-weight: 500;
+  color: rgb(199, 210, 254);
+}

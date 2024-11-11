@@ -1,0 +1,14 @@
+/* Ensure the sidebar stretches the full height of the viewport */
+.sidebar {
+  height: 100vh; /* Full viewport height */
+  position: fixed; /* Fixed position so it stays in place */
+  top: 0; /* Align to the top */
+  left: 0; /* Align to the left */
+  background-color: #f4f4f4; /* Background color */
+  /* Add other styles such as padding, border, etc. */
+}
+
+.main-content {
+  margin-left: 150px; /* Adjust based on sidebar width */
+  width: calc(100% - 250px); /* Full width minus sidebar width */
+}

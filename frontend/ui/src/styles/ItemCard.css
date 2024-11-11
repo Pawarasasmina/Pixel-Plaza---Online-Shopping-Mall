@@ -1,0 +1,73 @@
+.item-card {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 300px;
+    margin: 20px;
+  }
+  
+  .item-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  }
+  
+  .item-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .item-details {
+    padding: 15px;
+    text-align: center;
+  }
+  
+  .item-card .item-name  {
+    font-size: 1.55rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .item-price {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+  }
+  
+  .current-price {
+    font-size: 30px;
+    color: #e63946;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  .original-price {
+    font-size: 18px;
+    text-decoration: line-through;
+    color: #888;
+    margin-right: 10px;
+  }
+  
+  .discount {
+    color: #737473;
+    
+  }
+  
+  .item-rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .rating-stars {
+    color: #ffd700;
+    margin-right: 5px;
+  }
+  
+  .rating-count {
+    color: #666;
+    font-size: 0.9rem;
+  }
+  

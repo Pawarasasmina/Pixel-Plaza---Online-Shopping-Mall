@@ -1,0 +1,71 @@
+/* CartItem.css */
+
+.cart-item {
+  position: relative; /* Ensure that the child elements can be positioned absolutely */
+  display: flex;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+
+.cart-item-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.cart-item-details {
+  flex: 1;
+  position: relative; /* Required for the absolute positioning of icons */
+}
+
+.cart-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart-item-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.edit-button, .delete-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5em; /* Adjust the icon size */
+  color: #333;
+}
+
+.edit-button:hover {
+  color: #007bff;
+}
+
+.delete-button:hover {
+  color: #dc3545;
+}
+
+.cart-item-options {
+  margin: 10px 0;
+}
+
+.color-selection {
+  display: flex;
+  align-items: center;
+}
+
+.color-display {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  margin-left: 10px;
+}
+
+.quantity-selection {
+  display: flex;
+  align-items: center;
+}

@@ -1,0 +1,299 @@
+.feedback-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid layout */
+  background-color: #d5ebfd;
+  gap: 20px; /* Spacing between cards */
+  padding: 20px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+  
+  
+  .card:hover {
+    transform: scale(1.02);
+  }
+  
+  .card-content {
+    padding: 20px;
+  }
+  
+  .input,
+  .textarea,
+  .select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+  }
+  
+  .input:focus,
+  .textarea:focus,
+  .select:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  .textarea {
+    min-height: 80px;
+    resize: vertical;
+  }
+  
+  .button {
+    background-color: #ff7300;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 10px 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+  }
+  
+  .button:active {
+    transform: translateY(0);
+  }
+  
+  .cancel-button {
+    background-color: #f44336;
+  }
+  
+  .cancel-button:hover {
+    background-color: #d32f2f;
+  }
+
+  
+  .update-form-container {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .update-form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .form-actions {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .update-button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .update-button:hover {
+    background-color: #218838;
+  }
+  
+  .cancel-button {
+    background-color: #dc3545;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cancel-button:hover {
+    background-color: #c82333;
+  }
+
+  .card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  .card-actions {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+  }
+
+  /* FeedbackCard.css */
+
+.notification {
+  background-color: #f0ad4e; /* Orange notification color */
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card input,
+.card textarea,
+.card select {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.card button {
+  background-color: #007bff;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background-color: #0056b3;
+}
+
+.card {
+  margin: 20px;
+  background-color: #d5ebfd;
+  border-radius: 10px;
+}
+
+.notification {
+  color: green;
+  font-weight: bold;
+}
+
+textarea, input[type="text"], select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.feedback-list {
+    padding: 20px; /* Overall padding */
+}
+
+.search-container {
+  flex: 1;
+  padding: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px; /* Spacing below the search input */
+}
+
+.search-input {
+    width: 100%; /* Full width for the search bar */
+    padding: 10px;
+    border: 2px solid #BDC3C7;
+    border-radius: 8px;
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+
+.search-input:focus {
+    border-color: #3498DB;
+    outline: none;
+}
+
+.filter-container {
+    flex-shrink: 0;
+    padding: 10px;
+    margin-bottom: 10px; /* Spacing below the filter dropdown */
+}
+
+.filter-select {
+    width: 100%; /* Full width for the filter dropdown */
+    padding: 10px;
+    border: 2px solid #BDC3C7;
+    border-radius: 8px;
+    font-size: 1.0em;
+    transition: border-color 0.3s;
+}
+
+.filter-select:focus {
+    border-color: #3498DB;
+    outline: none;
+}
+
+.card-container {
+    display: grid; /* Use grid layout for cards */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid layout */
+    gap: 20px; /* Spacing between cards */
+}
+
+.feedback-list-container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.controls-container {
+  display: flex;
+  align-items: center; /* Align items vertically */
+  gap: 10px; /* Space between search and filter */
+  margin-bottom: 20px; /* Space below the controls */
+}
+
+.generate-pdf-button {
+  background-color: #3498DB; /* Green background */
+  border: none; /* Remove default border */
+  color: white; /* White text */
+  padding: 10px; /* Button padding */
+  text-align: center; /* Center the text */
+  text-decoration: none; /* Remove underline */
+  display: inline-block; /* Set display inline */
+  font-size: 16px; /* Button text size */
+  margin: 10px 2px; /* Margin around button */
+  cursor: pointer; /* Pointer cursor on hover */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+.generate-pdf-button:hover {
+  background-color: #3498DB; /* Darker green on hover */
+}
+

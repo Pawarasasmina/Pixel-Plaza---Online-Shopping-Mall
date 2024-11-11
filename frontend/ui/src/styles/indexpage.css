@@ -1,0 +1,283 @@
+/* src/components/IndexPage.css */
+
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.homepage {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: #333;
+  background: linear-gradient(rgba(0, 0, 0, 0.014), rgba(177, 177, 177, 0.247)),
+    url("path-to-your-background-image.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(
+      rgba(83, 83, 83, 0.247),
+      rgba(255, 255, 255, 0.014)
+    ),
+    url("path-to-your-hero-image.jpg") no-repeat center center;
+  background-size: cover;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  margin: 0;
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 1.75rem;
+  margin: 10px 0;
+  font-weight: 300;
+}
+
+.btn {
+  background-color: #212529;
+  color: white;
+  padding: 15px 30px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+}
+
+.btn:hover {
+  color: white;
+  background-color: #16181b;
+  transform: scale(1.05);
+}
+
+/* Section Styles */
+.section {
+  padding: 60px 20px;
+  text-align: center;
+  animation: fadeInUp 1.5s ease-out;
+}
+
+.section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #adaeaf;
+  font-weight: 600;
+  position: relative;
+  display: inline-block;
+}
+
+.section h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #15171a;
+  margin: 10px auto 0;
+}
+
+/* Categories Section */
+
+.category-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.category-item {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 20px;
+  width: 250px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category-item img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.category-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Offers Section */
+.offers {
+  margin-top: 60px;
+}
+
+.offer-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.offer-item {
+  background: linear-gradient(135deg, #ff6b6b, #f06595);
+  font-size: 20px;
+  color: #ffffff;
+  padding: 40px 60px; /* Increased padding */
+  border-radius: 15px;
+  border: 2px solid rgba(255, 255, 255, 0.2); /* Added border */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increased box-shadow for depth */
+  flex: 1;
+  min-width: 250px;
+  max-width: 300px; /* Optional: limit max width for consistent appearance */
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.offer-item:hover {
+  transform: translateY(-10px); /* Creates a "lift" effect */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Darker shadow on hover */
+  background: linear-gradient(
+    135deg,
+    #ff8787,
+    #f284b6
+  ); /* Slightly lighter gradient on hover */
+}
+
+/* Shops Section */
+
+.shop-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.shop-item {
+  background-color: #343a40;
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  min-width: 250px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.shop-item img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.shop-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Keyframes for Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Slider Styling */
+.offer-slider {
+  max-width: 800px;
+  margin: 0 auto;
+  margin-left: 50px;
+  margin-right: 10px;
+}
+
+.offer-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* src/styles/indexpage.css */
+
+/* Existing styles... */
+
+.offers {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.offer-slider-container {
+  flex: 1;
+}
+
+.map-button-container {
+  margin-bottom: 40px;
+  margin-right: 100px;
+  flex: 0 0 250px; /* Fixed width for the button container */
+  text-align: center; /* Center the button content */
+}
+
+.map-button {
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ff9800; /* Button background color */
+  color: white;
+  height: 460px;
+  padding: 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.map-button:hover {
+  background-color: #e68a00; /* Darker shade on hover */
+}
+
+.map-button-image {
+  width: 100px; /* Adjust size as needed */
+  height: auto;
+  margin-bottom: 10px; /* Space between image and text */
+}
+
+.map-button-text {
+  font-size: 1.2rem; /* Adjust font size */
+  font-weight: bold;
+}
+
+/* Other existing styles... */

@@ -1,0 +1,16 @@
+/* styles/custom.css */
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px #e76f51;
+  }
+  50% {
+    box-shadow: 0 0 20px #e76f51;
+  }
+  100% {
+    box-shadow: 0 0 5px #e76f51;
+  }
+}
+
+.glow-effect {
+  animation: glow 1.5s infinite alternate;
+}

@@ -1,0 +1,154 @@
+/* Container for the form */
+.form-container {
+    background-color: #e1e8f5; /* Light grey background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    max-width: 600px; /* Form width */
+    margin: 40px auto; /* Center the form */
+    padding: 30px; /* Padding inside the form */
+}
+
+/* Form title */
+.form-container h2 {
+    text-align: center; /* Center the title */
+    color: #000000; /* Primary blue text color */
+    font-size: 1.8em; /* Larger font size */
+    margin-bottom: 20px; /* Spacing below the title */
+}
+
+/* General form group styling */
+.form-group {
+    margin-bottom: 20px; /* Space between form fields */
+}
+
+/* Labels */
+.form-group label {
+    display: block; /* Block level label */
+    font-weight: bold; /* Bold labels */
+    color: #34495e; /* Dark grey color for labels */
+    margin-bottom: 8px; /* Space below the label */
+}
+
+/* Input and select fields */
+input[type="text"],
+textarea,
+select {
+    width: 100%; /* Full width */
+    padding: 12px; /* Padding inside the fields */
+    border: 2px solid #bdc3c7; /* Light grey border */
+    border-radius: 8px; /* Rounded corners */
+    font-size: 1em; /* Font size for readability */
+    transition: border-color 0.3s ease; /* Smooth transition for border */
+    box-sizing: border-box; /* Include padding in width */
+}
+
+/* Input and select focus effects */
+input[type="text"]:focus,
+textarea:focus,
+select:focus {
+    border-color: #3498db; /* Primary blue border on focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Textarea (Content field) */
+textarea {
+    min-height: 120px; /* Minimum height for the textarea */
+    resize: vertical; /* Allow vertical resizing */
+}
+
+/* Radio button styles */
+.feedback-type {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px; /* Increased gap for better spacing */
+    position: relative;
+}
+
+/* Positive label style */
+.positive-label {
+    position: relative;
+}
+
+.positive-label::before {
+    content: "Positive"; /* Display the word "Positive" */
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: -80px; /* Adjust horizontal position to move the text behind */
+    transform: translateY(-50%); /* Center text vertically */
+    font-size: 1.0em; /* Reduced font size */
+    color: rgba(0, 128, 0, 0.2); /* Light green, faded color */
+    font-weight: bold; /* Bold text */
+    z-index: -1; /* Ensure the text is behind the radio button */
+}
+
+/* Negative label style */
+.negative-label {
+    position: relative;
+}
+
+.negative-label::before {
+    content: "Negative"; /* Display the word "Negative" */
+    position: absolute;
+    top: 50%; /* Center vertically */
+    right: -80px; /* Adjust horizontal position to move the text behind */
+    transform: translateY(-50%); /* Center text vertically */
+    font-size: 0.8em; /* Reduced font size */
+    color: rgba(255, 0, 0, 0.2); /* Light red, faded color */
+    font-weight: bold; /* Bold text */
+    z-index: -1; /* Ensure the text is behind the radio button */
+}
+
+/* General radio label styling */
+.radio-label {
+    display: flex;
+    align-items: center;
+    gap: 25px; /* Decreased gap between radio button and text */
+    font-size: 0.9em;
+}
+
+input[type="radio"] {
+    accent-color: #3498db; /* Custom blue color for the radio button */
+    width: 20px;
+    height: 20px;
+}
+
+/* Rating dropdown */
+#rating {
+    background-color: white; /* Ensure background remains white */
+    cursor: pointer; /* Change cursor on hover */
+}
+
+/* Submit button */
+input[type="submit"] {
+    width: 100%; /* Full-width button */
+    background-color: #3498db; /* Blue background */
+    color: white; /* White text */
+    padding: 12px; /* Padding inside the button */
+    font-size: 1.2em; /* Larger font size */
+    font-weight: bold; /* Bold text */
+    border: none; /* Remove border */
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition */
+}
+
+/* Button hover and active effects */
+input[type="submit"]:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+    transform: translateY(-2px); /* Lift effect */
+}
+
+input[type="submit"]:active {
+    transform: translateY(0); /* Reset on click */
+}
+
+/* Additional responsive styling */
+@media (max-width: 768px) {
+    .form-container {
+        padding: 20px; /* Adjust padding on smaller screens */
+    }
+
+    input[type="submit"] {
+        font-size: 1.1em; /* Slightly smaller font size on smaller screens */
+    }
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../node_modules/@mui/material/utils/memoTheme.js"],
+  "sourcesContent": ["// We need to pass an argument as `{ theme }` for PigmentCSS, but we don't want to\n// allocate more objects.\nconst arg = {\n  theme: undefined\n};\n\n/**\n * Memoize style function on theme.\n * Intended to be used in styled() calls that only need access to the theme.\n */\nexport default function memoTheme(styleFn) {\n  let lastValue;\n  let lastTheme;\n  return props => {\n    let value = lastValue;\n    if (value === undefined || props.theme !== lastTheme) {\n      arg.theme = props.theme;\n      value = styleFn(arg);\n      lastValue = value;\n      lastTheme = props.theme;\n    }\n    return value;\n  };\n}"],
+  "mappings": ";AAEA,IAAM,MAAM;AAAA,EACV,OAAO;AACT;AAMe,SAAR,UAA2B,SAAS;AACzC,MAAI;AACJ,MAAI;AACJ,SAAO,WAAS;AACd,QAAI,QAAQ;AACZ,QAAI,UAAU,UAAa,MAAM,UAAU,WAAW;AACpD,UAAI,QAAQ,MAAM;AAClB,cAAQ,QAAQ,GAAG;AACnB,kBAAY;AACZ,kBAAY,MAAM;AAAA,IACpB;AACA,WAAO;AAAA,EACT;AACF;",
+  "names": []
+}
